@@ -24,8 +24,8 @@ language
 description
 	original_author = <
 		["name"] = <"Heather Leslie">
-		["organisation"] = <"Ocean Informatics">
 		["email"] = <"heather.leslie@oceaninformatics.com">
+		["organisation"] = <"Ocean Informatics">
 		["date"] = <"2007-04-09">
 	>
 	details = <
@@ -57,7 +57,7 @@ description
 	lifecycle_state = <"AuthorDraft">
 	other_contributors = <"Heather Leslie, Ocean Informatics, Australia (Editor)", "Ian McNicoll, Ocean Informatics, United Kingdom (Editor)">
 	other_details = <
-		["MD5-CAM-1.0.1"] = <"D136402F2831A67B401B289AD52ED788">
+		["MD5-CAM-1.0.1"] = <"D0BEA8BD2EAA5D86CC82AE3A5900840D">
 	>
 
 definition
@@ -86,6 +86,7 @@ definition
 			}
 			ELEMENT[at0006] occurrences matches {0..1} matches {	-- Degree
 				value matches {
+					0|[local::at0013], 	-- None
 					1|[local::at0007], 	-- Mild +
 					2|[local::at0008], 	-- Moderate ++
 					3|[local::at0009]  	-- Severe +++
@@ -98,8 +99,6 @@ definition
 			}
 		}
 	}
-
-
 
 ontology
 	term_definitions = <
@@ -145,6 +144,10 @@ ontology
 					text = <"Comments">
 					description = <"Addtional comments about the oedema.">
 				>
+				["at0013"] = <
+					text = <"None">
+					description = <"No oedema present.">
+				>
 			>
 		>
 		["ar-sy"] = <
@@ -189,6 +192,10 @@ ontology
 					text = <"تعليقات">
 					description = <"*">
 				>
+				["at0013"] = <
+					text = <"*None(en)">
+					description = <"*No oedema present.(en)">
+				>
 			>
 		>
 		["ru"] = <
@@ -232,6 +239,10 @@ ontology
 				["at0012"] = <
 					text = <"Примечание">
 					description = <"*">
+				>
+				["at0013"] = <
+					text = <"*None(en)">
+					description = <"*No oedema present.(en)">
 				>
 			>
 		>
