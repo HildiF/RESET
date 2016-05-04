@@ -1,0 +1,92 @@
+﻿archetype (adl_version=1.4)
+	openEHR-EHR-CLUSTER.airway_risks_reset.v0
+
+concept
+	[at0000]	-- Airway Risks - RESET
+language
+	original_language = <[ISO_639-1::en]>
+description
+	original_author = <
+		["name"] = <"Hildegard Franke">
+		["email"] = <"hildi@freshehr.com">
+		["organisation"] = <"freshEHR Clinical Informatics Ltd.">
+		["date"] = <"2016-03-28">
+	>
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"For recording airway risks as part of the RRS Tool developed by Queens University Belfast.">
+			use = <"Use to record airway risks such as aspiration or burns risk as part of an airway evaluation during a rapid response assessment.">
+			misuse = <"Not to be used to record general health risk factors - use EVALUATION.health_risk.v1.">
+			copyright = <"">
+		>
+	>
+	lifecycle_state = <"0">
+	other_contributors = <>
+	other_details = <
+		["current_contact"] = <"Hildegard Franke, freshEHR Clinical Informatics Ltd.<hildi@freshehr.com>">
+		["MD5-CAM-1.0.1"] = <"232FB0F3FF00D4ECC0959E7815EA6544">
+	>
+
+definition
+	CLUSTER[at0000] matches {	-- Airway Risks - RESET
+		items cardinality matches {1..*; unordered} matches {
+			ELEMENT[at0002] occurrences matches {0..1} matches {	-- Last eaten or drunk?
+				value matches {
+					DV_DATE_TIME matches {*}
+				}
+			}
+			ELEMENT[at0003] occurrences matches {0..1} matches {	-- Injury last meal interval
+				value matches {
+					DV_INTERVAL<DV_DATE_TIME> matches {
+						upper matches {
+							DV_DATE_TIME matches {*}
+						}
+						lower matches {
+							DV_DATE_TIME matches {*}
+						}
+					}
+				}
+			}
+			ELEMENT[at0004] occurrences matches {0..1} matches {	-- GORD
+				value matches {
+					DV_BOOLEAN matches {
+						value matches {True, False}
+					}
+				}
+			}
+			ELEMENT[at0005] occurrences matches {0..1} matches {	-- Burn risk factors
+				value matches {
+					DV_TEXT matches {*}
+				}
+			}
+		}
+	}
+
+ontology
+	term_definitions = <
+		["en"] = <
+			items = <
+				["at0000"] = <
+					text = <"Airway Risks - RESET">
+					description = <"unknown">
+				>
+				["at0002"] = <
+					text = <"Last eaten or drunk?">
+					description = <"Date and time when patient last had something to eat or drink.">
+				>
+				["at0003"] = <
+					text = <"Injury last meal interval">
+					description = <"The interval from the last meal to when the injury occurred.">
+				>
+				["at0004"] = <
+					text = <"GORD">
+					description = <"Does the patient suffer from gastro-oesophageal reflux disorder?">
+				>
+				["at0005"] = <
+					text = <"Burn risk factors">
+					description = <"Narrative description of any airway risk factor associated with burn injuries.">
+				>
+			>
+		>
+	>

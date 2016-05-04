@@ -1,0 +1,92 @@
+﻿archetype (adl_version=1.4)
+	openEHR-EHR-CLUSTER.extra_examination_reset.v0
+
+concept
+	[at0000]	-- Extra examination RESET
+language
+	original_language = <[ISO_639-1::en]>
+description
+	original_author = <
+		["name"] = <"Hildegard Franke">
+		["email"] = <"hildi@freshehr.com">
+		["organisation"] = <"freshEHR Clinical Informatics Ltd.">
+		["date"] = <"2016-03-29">
+	>
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"For recording free text additional examination details as part of an unscheduled clinical assessment.">
+			use = <"Use for unstructured free text examination details which don't fit into other specific categories, in the context of an unscheduled clinical assessment in emergency care.">
+			misuse = <"Not to be used for structured examination details or outside unscheduled clinical assessment in emergency care.">
+			copyright = <"">
+		>
+	>
+	lifecycle_state = <"0">
+	other_contributors = <>
+	other_details = <
+		["current_contact"] = <"Hildegard Franke, freshEHR Clinical Informatics Ltd.<hildi@freshehr.com>">
+		["MD5-CAM-1.0.1"] = <"E6DE379C65584317AEEAC005CF6E44FB">
+	>
+
+definition
+	CLUSTER[at0000] matches {	-- Extra examination RESET
+		items cardinality matches {1..*; unordered} matches {
+			ELEMENT[at0001] occurrences matches {0..1} matches {	-- Abdominal examination
+				value matches {
+					DV_TEXT matches {*}
+				}
+			}
+			ELEMENT[at0002] occurrences matches {0..1} matches {	-- Drains, lines and tubes
+				value matches {
+					DV_TEXT matches {*}
+				}
+			}
+			ELEMENT[at0003] occurrences matches {0..1} matches {	-- Functional examination
+				value matches {
+					DV_TEXT matches {*}
+				}
+			}
+			ELEMENT[at0004] occurrences matches {0..1} matches {	-- Care preferences / ceilings
+				value matches {
+					DV_TEXT matches {*}
+				}
+			}
+			ELEMENT[at0005] occurrences matches {0..1} matches {	-- Renal, sepsis and other labs
+				value matches {
+					DV_TEXT matches {*}
+				}
+			}
+		}
+	}
+
+ontology
+	term_definitions = <
+		["en"] = <
+			items = <
+				["at0000"] = <
+					text = <"Extra examination RESET">
+					description = <"unknown">
+				>
+				["at0001"] = <
+					text = <"Abdominal examination">
+					description = <"Narrative details of abdominal examination.">
+				>
+				["at0002"] = <
+					text = <"Drains, lines and tubes">
+					description = <"Narrative description of drains, lines and tubes in the patient's body.">
+				>
+				["at0003"] = <
+					text = <"Functional examination">
+					description = <"Narrative description of functional examination.">
+				>
+				["at0004"] = <
+					text = <"Care preferences / ceilings">
+					description = <"Narrative description of care preferences and ceilings.">
+				>
+				["at0005"] = <
+					text = <"Renal, sepsis and other labs">
+					description = <"Narrative description of tests for renal problems and sepsis and any other relevant lab tests.">
+				>
+			>
+		>
+	>

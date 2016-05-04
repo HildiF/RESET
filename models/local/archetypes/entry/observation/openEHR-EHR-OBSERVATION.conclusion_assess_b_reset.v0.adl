@@ -1,0 +1,100 @@
+archetype (adl_version=1.4)
+	openEHR-EHR-OBSERVATION.conclusion_assess_b_reset.v0
+
+concept
+	[at0000]	-- Conclusion Assessment B RESET
+language
+	original_language = <[ISO_639-1::en]>
+description
+	original_author = <
+		["name"] = <"Hildegard Franke">
+		["email"] = <"hildi@freshehr.com">
+		["organisation"] = <"freshEHR Clinical Informatics Ltd.">
+		["date"] = <"2016-05-03">
+	>
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"Local archetype for RESET (Rapid response based Emergency Structured Exam Tool) to describe conclusion of Assessment Part B (Breathing assessment).">
+			use = <"Use for RESET project for breathing assessment conclusion.">
+			keywords = <"Assessment", "RESET", "Emergency", "Rapid response", "Breathing">
+			misuse = <"Not to be used outside the scope of RESET project.">
+			copyright = <"">
+		>
+	>
+	lifecycle_state = <"Initial">
+	other_contributors = <>
+	other_details = <
+		["current_contact"] = <"Hildegard Franke, freshEHR Clinical Informatics Ltd.<hildi@freshehr.com>">
+		["MD5-CAM-1.0.1"] = <"5B870FB217BED91ADBAA0B3DB3A1FB31">
+	>
+
+definition
+	OBSERVATION[at0000] matches {	-- Conclusion Assessment B RESET
+		data matches {
+			HISTORY[at0001] matches {	-- Event Series
+				events cardinality matches {1..*; unordered} matches {
+					EVENT[at0002] occurrences matches {0..1} matches {	-- Any event
+						data matches {
+							ITEM_TREE[at0003] matches {	-- Tree
+								items cardinality matches {0..*; unordered} matches {
+									ELEMENT[at0004] occurrences matches {0..1} matches {	-- Assessment B conclusion
+										value matches {
+											DV_CODED_TEXT matches {
+												defining_code matches {
+													[local::
+													at0005, 	-- Evidence of distress
+													at0006, 	-- Failure
+													at0007]	-- Not compromised
+												}
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+ontology
+	term_definitions = <
+		["en"] = <
+			items = <
+				["at0000"] = <
+					text = <"Conclusion Assessment B RESET">
+					description = <"unknown">
+				>
+				["at0001"] = <
+					text = <"Event Series">
+					description = <"@ internal @">
+				>
+				["at0002"] = <
+					text = <"Any event">
+					description = <"*">
+				>
+				["at0003"] = <
+					text = <"Tree">
+					description = <"@ internal @">
+				>
+				["at0004"] = <
+					text = <"Assessment B conclusion">
+					description = <"Describes conclusion of breathing assessment (Part B of RESET assessment).">
+				>
+				["at0005"] = <
+					text = <"Evidence of distress">
+					description = <"The assessment of the patient's breathing indicates evidences of distress.">
+				>
+				["at0006"] = <
+					text = <"Failure">
+					description = <"The assessment of the patient's breathing indicates failure.">
+				>
+				["at0007"] = <
+					text = <"Not compromised">
+					description = <"The assessment of the patient's breathing indicates that the patient's breathing is not compromised.">
+				>
+			>
+		>
+	>

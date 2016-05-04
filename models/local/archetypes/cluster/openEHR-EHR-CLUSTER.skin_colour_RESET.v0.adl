@@ -1,0 +1,90 @@
+﻿archetype (adl_version=1.4)
+	openEHR-EHR-CLUSTER.skin_colour_reset.v0
+
+concept
+	[at0000]	-- Skin colour RESET
+language
+	original_language = <[ISO_639-1::en]>
+description
+	original_author = <
+		["name"] = <"Hildegard Franke">
+		["email"] = <"hildi@freshehr.com">
+		["organisation"] = <"freshEHR Clinical Informatics Ltd.">
+		["date"] = <"2016-03-28">
+	>
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"For recording of skin colour in the context of an unscheduled clinical assessment.">
+			use = <"Use to record skin colour.">
+			misuse = <"Not to be used to record any other skin characteristics.">
+			copyright = <"">
+		>
+	>
+	lifecycle_state = <"0">
+	other_contributors = <>
+	other_details = <
+		["current_contact"] = <"Hildegard Franke, freshEHR Clinical Informatics Ltd.<hildi@freshehr.com>">
+		["MD5-CAM-1.0.1"] = <"A9FB0FBC643A4CF9755E7475C9E3EA39">
+	>
+
+definition
+	CLUSTER[at0000] matches {	-- Skin colour RESET
+		items cardinality matches {1..*; unordered} matches {
+			ELEMENT[at0001] occurrences matches {0..1} matches {	-- Skin colour
+				value matches {
+					DV_CODED_TEXT matches {
+						defining_code matches {
+							[local::
+							at0002, 	-- Flushed
+							at0003, 	-- Normal
+							at0004, 	-- Pale
+							at0005, 	-- Mild mottling
+							at0006, 	-- Moderate mottling
+							at0007]	-- Severe mottling
+						}
+					}
+				}
+			}
+		}
+	}
+
+ontology
+	term_definitions = <
+		["en"] = <
+			items = <
+				["at0000"] = <
+					text = <"Skin colour RESET">
+					description = <"unknown">
+				>
+				["at0001"] = <
+					text = <"Skin colour">
+					description = <"Coded description of the colour or complexion of the skin. ">
+				>
+				["at0002"] = <
+					text = <"Flushed">
+					description = <"The skin complexion appears flushed.">
+				>
+				["at0003"] = <
+					text = <"Normal">
+					description = <"The skin complexion appears normal.">
+				>
+				["at0004"] = <
+					text = <"Pale">
+					description = <"The skin complexion appears pale.">
+				>
+				["at0005"] = <
+					text = <"Mild mottling">
+					description = <"The skin complexion appears mildy mottled.">
+				>
+				["at0006"] = <
+					text = <"Moderate mottling">
+					description = <"The skin complexion appears moderately mottled.">
+				>
+				["at0007"] = <
+					text = <"Severe mottling">
+					description = <"The skin complexion appears severely mottled.">
+				>
+			>
+		>
+	>
