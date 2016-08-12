@@ -15,8 +15,9 @@ description
 	details = <
 		["en"] = <
 			language = <[ISO_639-1::en]>
-			purpose = <"Breathing assessment for local use">
-			use = <"">
+			purpose = <"Breathing assessment for local use in RESET project.">
+			use = <"Local archetype for use in RESET project.">
+			keywords = <"RESET", "breathing", "assessment">
 			misuse = <"">
 			copyright = <"">
 		>
@@ -25,7 +26,7 @@ description
 	other_contributors = <"Teresa Ross", "Brendan O'Brien", "Alexander Davey", "Andrew Patton">
 	other_details = <
 		["current_contact"] = <"Hildegard Franke, freshEHR Clinical Informatics Ltd.<hildi@freshehr.com>">
-		["MD5-CAM-1.0.1"] = <"143232808FF1E711D8E0443C2B34E2F9">
+		["MD5-CAM-1.0.1"] = <"5D0F4E886D81D0A05D8808160211E988">
 	>
 
 definition
@@ -78,6 +79,27 @@ definition
 								}
 							}
 						}
+						state matches {
+							ITEM_TREE[at0020] matches {	-- Tree
+								items cardinality matches {0..*; unordered} matches {
+									ELEMENT[at0021] occurrences matches {0..1} matches {	-- Confounding factors
+										value matches {
+											DV_TEXT matches {*}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		protocol matches {
+			ITEM_TREE[at0018] matches {	-- Tree
+				items cardinality matches {0..*; unordered} matches {
+					allow_archetype CLUSTER[at0019] occurrences matches {0..*} matches {	-- Extension
+						include
+							archetype_id/value matches {/.*/}
 					}
 				}
 			}
@@ -159,6 +181,23 @@ ontology
 				["at0017"] = <
 					text = <"Tiring">
 					description = <"Tiring.">
+				>
+				["at0018"] = <
+					text = <"Tree">
+					description = <"@ internal @">
+				>
+				["at0019"] = <
+					text = <"Extension">
+					description = <"Additional information required to capture local context or to align with other reference models/formalisms.">
+					comment = <"e.g. Local hospital departmental infomation or additional metadata to align with HL7 or CDISC equivalents.">
+				>
+				["at0020"] = <
+					text = <"Tree">
+					description = <"@ internal @">
+				>
+				["at0021"] = <
+					text = <"Confounding factors">
+					description = <"Record any issues or factors that may impact on the assessment.">
 				>
 			>
 		>

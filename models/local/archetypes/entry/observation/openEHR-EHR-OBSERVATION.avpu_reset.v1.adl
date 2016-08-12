@@ -1,8 +1,8 @@
 ﻿archetype (adl_version=1.4)
-	openEHR-EHR-OBSERVATION.avpu.v1
+	openEHR-EHR-OBSERVATION.avpu_reset.v1
 
 concept
-	[at0000]	-- AVPU
+	[at0000]	-- AVPU RESET
 language
 	original_language = <[ISO_639-1::en]>
 	translations = <
@@ -47,11 +47,11 @@ description
 Kelly, CA; Upex A; Bateman DN. (February 2005). \"Comparison of consciousness level assessment in the poisoned patient using the alert/verbal/painful/unresponsive scale and the Glasgow Coma Scale\". Annals of Emergency Medicine 45 (2).
 http://en.wikipedia.org/wiki/AVPU">
 		["current_contact"] = <"Heather Leslie, Ocean Informatics, heather.leslie@oceaninformatics.com">
-		["MD5-CAM-1.0.1"] = <"047F8C0DC330F0610F77FE0B8EB57D08">
+		["MD5-CAM-1.0.1"] = <"89C677F5C9C4FD10AF9CF74F8565C3B5">
 	>
 
 definition
-	OBSERVATION[at0000] matches {	-- AVPU
+	OBSERVATION[at0000] matches {	-- AVPU RESET
 		data matches {
 			HISTORY[at0001] matches {	-- Event Series
 				events cardinality matches {1..*; unordered} matches {
@@ -90,6 +90,16 @@ definition
 				}
 			}
 		}
+		protocol matches {
+			ITEM_TREE[at0011] matches {	-- Tree
+				items cardinality matches {0..*; unordered} matches {
+					allow_archetype CLUSTER[at0012] occurrences matches {0..1} matches {	-- Extension
+						include
+							archetype_id/value matches {/.*/}
+					}
+				}
+			}
+		}
 	}
 
 ontology
@@ -97,7 +107,7 @@ ontology
 		["en"] = <
 			items = <
 				["at0000"] = <
-					text = <"AVPU">
+					text = <"AVPU RESET">
 					description = <"Simple scale used as part of an assessment to measure and record a patient's responsiveness, indicating their level of consciousness. AVPU is an acronym for 'Alert', 'Voice', 'Pain', 'Unresponsive'.">
 				>
 				["at0001"] = <
@@ -139,6 +149,15 @@ ontology
 				["at0010"] = <
 					text = <"Confounding factors">
 					description = <"Record any issues or factors that may impact on the AVPU result, such as obesity or short neck.">
+				>
+				["at0011"] = <
+					text = <"Tree">
+					description = <"@ internal @">
+				>
+				["at0012"] = <
+					text = <"Extension">
+					description = <"Additional information required to capture local context or to align with other reference models/formalisms.">
+					comment = <"e.g. Local hospital departmental infomation or additional metadata to align with HL7 or CDISC equivalents.">
 				>
 			>
 		>
@@ -186,6 +205,14 @@ ontology
 				>
 				["at0010"] = <
 					text = <"*New element(en)">
+					description = <"**(en)">
+				>
+				["at0011"] = <
+					text = <"*Tree(en)">
+					description = <"*@ internal @(en)">
+				>
+				["at0012"] = <
+					text = <"*Cluster(en)">
 					description = <"**(en)">
 				>
 			>

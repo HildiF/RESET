@@ -1,0 +1,99 @@
+﻿archetype (adl_version=1.4)
+	openEHR-EHR-OBSERVATION.conclusion_assess_e_reset.v0
+
+concept
+	[at0000]	-- Conclusion Assessment E RESET
+language
+	original_language = <[ISO_639-1::en]>
+description
+	original_author = <
+		["name"] = <"Hildegard Franke">
+		["email"] = <"hildi@freshehr.com">
+		["organisation"] = <"freshEHR Clinical Informatics Ltd.">
+		["date"] = <"2016-05-17">
+	>
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"Local archetype for RESET (Rapid response based Emergency Structured Exam Tool) to describe conclusion of Assessment Part E (Extra examinations).">
+			use = <"Use for RESET project for conclusion of Assessment Part E.">
+			misuse = <"Not to be used outside the scope of the RESET project.">
+			copyright = <"">
+		>
+	>
+	lifecycle_state = <"0">
+	other_contributors = <>
+	other_details = <
+		["current_contact"] = <"Hildegard Franke, freshEHR Clinical Informatics Ltd.<hildi@freshehr.com>">
+		["MD5-CAM-1.0.1"] = <"75A167C52E2763A10196015EAB5F3C7F">
+	>
+
+definition
+	OBSERVATION[at0000] matches {	-- Conclusion Assessment E RESET
+		data matches {
+			HISTORY[at0001] matches {	-- Event Series
+				events cardinality matches {1..*; unordered} matches {
+					EVENT[at0002] occurrences matches {0..1} matches {	-- Any event
+						data matches {
+							ITEM_TREE[at0003] matches {	-- Tree
+								items cardinality matches {0..*; unordered} matches {
+									ELEMENT[at0004] occurrences matches {0..1} matches {	-- Assessment E conclusion
+										value matches {
+											DV_CODED_TEXT matches {
+												defining_code matches {
+													[local::
+													at0005, 	-- Acute surgical pathology
+													at0006, 	-- Sepsis
+													at0007]	-- Other problem
+												}
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+ontology
+	term_definitions = <
+		["en"] = <
+			items = <
+				["at0000"] = <
+					text = <"Conclusion Assessment E RESET">
+					description = <"unknown">
+				>
+				["at0001"] = <
+					text = <"Event Series">
+					description = <"@ internal @">
+				>
+				["at0002"] = <
+					text = <"Any event">
+					description = <"*">
+				>
+				["at0003"] = <
+					text = <"Tree">
+					description = <"@ internal @">
+				>
+				["at0004"] = <
+					text = <"Assessment E conclusion">
+					description = <"Describes the conclusion from the extra examinations assessment (Part E of the RESET assessment).">
+				>
+				["at0005"] = <
+					text = <"Acute surgical pathology">
+					description = <"Assessment indicates that the patient has acute surgical pathology.">
+				>
+				["at0006"] = <
+					text = <"Sepsis">
+					description = <"Assessment indicates that the patient has sepsis.">
+				>
+				["at0007"] = <
+					text = <"Other problem">
+					description = <"Assessment indicates that the patient has another problem other than acute surgical pathology or sepsis.">
+				>
+			>
+		>
+	>

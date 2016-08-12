@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <template xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="openEHR/v1/Template">
-  <id>4ee1cdfb-f715-477a-a392-97444a5b45f5</id>
-  <name>RESET - Assessment A.v1</name>
+  <id>eec92245-1912-4643-b85a-c4bfaac19628</id>
+  <name>RESET - Assessment E.v1</name>
   <description>
     <lifecycle_state>Initial</lifecycle_state>
     <details>
@@ -60,18 +60,7 @@
       </item>
     </other_details>
   </description>
-  <definition xsi:type="COMPOSITION" archetype_id="openEHR-EHR-COMPOSITION.encounter.v1" concept_name="Encounter" name="RESET Assessment A (Airway)">
-    <Content xsi:type="OBSERVATION" archetype_id="openEHR-EHR-OBSERVATION.avpu_reset.v1" concept_name="AVPU RESET" path="/content">
-      <Rule path="/data[at0001]" hide_on_form="true" />
-      <Rule path="/data[at0001]/events[at0002]" hide_on_form="true">
-        <eventConstraint>
-          <allowedType>PointInTime</allowedType>
-        </eventConstraint>
-      </Rule>
-      <Rule path="/data[at0001]/events[at0002]/data[at0003]" hide_on_form="true" />
-      <Rule path="/data[at0001]/events[at0002]/state[at0009]" hide_on_form="true" />
-      <Rule path="/protocol[at0011]" hide_on_form="true" />
-    </Content>
+  <definition xsi:type="COMPOSITION" archetype_id="openEHR-EHR-COMPOSITION.encounter.v1" concept_name="Encounter" name="Assessment E">
     <Content xsi:type="OBSERVATION" archetype_id="openEHR-EHR-OBSERVATION.story.v1" concept_name="Story/History" path="/content" hide_on_form="true">
       <Rule path="/data[at0001]" hide_on_form="true" />
       <Rule path="/data[at0001]/events[at0002]" hide_on_form="true">
@@ -81,11 +70,9 @@
       </Rule>
       <Rule path="/data[at0001]/events[at0002]/data[at0003]" hide_on_form="true" />
       <Rule path="/data[at0001]/events[at0002]/data[at0003]/items[at0004]" max="0" />
-      <Items xsi:type="CLUSTER" archetype_id="openEHR-EHR-CLUSTER.voice_and_breathing_sounds_reset.v0" concept_name="Voice Assessment RESET " path="/data[at0001]/events[at0002]/data[at0003]/items[at0006]">
-        <Rule path="/items[at0001]" max="0" />
-      </Items>
+      <Items xsi:type="CLUSTER" archetype_id="openEHR-EHR-CLUSTER.extra_examination_reset.v0" concept_name="Extra examination RESET" path="/data[at0001]/events[at0002]/data[at0003]/items[at0006]" />
     </Content>
-    <Content xsi:type="OBSERVATION" archetype_id="openEHR-EHR-OBSERVATION.conclusion_assess_a_reset.v0" concept_name="Conclusion Assessment A RESET" path="/content">
+    <Content xsi:type="OBSERVATION" archetype_id="openEHR-EHR-OBSERVATION.conclusion_assess_e_reset.v0" concept_name="Conclusion Assessment E RESET" path="/content" hide_on_form="true">
       <Rule path="/data[at0001]" hide_on_form="true" />
       <Rule path="/data[at0001]/events[at0002]" hide_on_form="true">
         <eventConstraint>
@@ -93,9 +80,6 @@
         </eventConstraint>
       </Rule>
       <Rule path="/data[at0001]/events[at0002]/data[at0003]" hide_on_form="true" />
-      <Rule path="/data[at0001]/events[at0002]/state[at0009]" hide_on_form="true" />
-      <Rule path="/data[at0001]/events[at0002]/state[at0009]/items[at0010]" max="0" />
-      <Rule path="/protocol[at0011]" hide_on_form="true" />
     </Content>
     <Context>
       <Rule path="/context/other_context[at0001]" hide_on_form="true" />
@@ -105,16 +89,13 @@
   <integrity_checks xsi:type="ArchetypeIntegrity" archetype_id="openEHR-EHR-COMPOSITION.encounter.v1">
     <digest id="MD5-CAM-1.0.1">A3E06C6FC4299B12A2D3798D87F8E032</digest>
   </integrity_checks>
-  <integrity_checks xsi:type="ArchetypeIntegrity" archetype_id="openEHR-EHR-OBSERVATION.avpu_reset.v1">
-    <digest id="MD5-CAM-1.0.1">89C677F5C9C4FD10AF9CF74F8565C3B5</digest>
-  </integrity_checks>
   <integrity_checks xsi:type="ArchetypeIntegrity" archetype_id="openEHR-EHR-OBSERVATION.story.v1">
     <digest id="MD5-CAM-1.0.1">FE1660C9372AFA772F77A1EA8F028E03</digest>
   </integrity_checks>
-  <integrity_checks xsi:type="ArchetypeIntegrity" archetype_id="openEHR-EHR-CLUSTER.voice_and_breathing_sounds_reset.v0">
-    <digest id="MD5-CAM-1.0.1">D2FC668588CA0C48B17ECECE1730564B</digest>
+  <integrity_checks xsi:type="ArchetypeIntegrity" archetype_id="openEHR-EHR-CLUSTER.extra_examination_reset.v0">
+    <digest id="MD5-CAM-1.0.1">277209C4AE9972F14B1BB6ABBC030469</digest>
   </integrity_checks>
-  <integrity_checks xsi:type="ArchetypeIntegrity" archetype_id="openEHR-EHR-OBSERVATION.conclusion_assess_a_reset.v0">
-    <digest id="MD5-CAM-1.0.1">0344DBCD373DD764662E59AA7D5BA0A9</digest>
+  <integrity_checks xsi:type="ArchetypeIntegrity" archetype_id="openEHR-EHR-OBSERVATION.conclusion_assess_e_reset.v0">
+    <digest id="MD5-CAM-1.0.1">75A167C52E2763A10196015EAB5F3C7F</digest>
   </integrity_checks>
 </template>

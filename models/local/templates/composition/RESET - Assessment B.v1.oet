@@ -61,7 +61,7 @@
     </other_details>
   </description>
   <definition xsi:type="COMPOSITION" archetype_id="openEHR-EHR-COMPOSITION.encounter.v1" concept_name="Encounter" name="RESET Assessment B (Breathing)">
-    <Content xsi:type="OBSERVATION" archetype_id="openEHR-EHR-OBSERVATION.respiration.v1" concept_name="Respirations" path="/content" hide_on_form="true">
+    <Content xsi:type="OBSERVATION" archetype_id="openEHR-EHR-OBSERVATION.respiration.v1" concept_name="Respirations" path="/content">
       <Rule path="/data[at0001]" hide_on_form="true" />
       <Rule path="/data[at0001]/events[at0002]" hide_on_form="true">
         <eventConstraint>
@@ -69,6 +69,7 @@
         </eventConstraint>
       </Rule>
       <Rule path="/data[at0001]/events[at0002]/data[at0003]" hide_on_form="true" />
+      <Rule path="/data[at0001]/events[at0002]/data[at0003]/items[at0004]" name="Respiratory Rate" />
       <Rule path="/data[at0001]/events[at0002]/data[at0003]/items[at0005]" max="0" />
       <Rule path="/data[at0001]/events[at0002]/data[at0003]/items[at0016]" max="0" />
       <Rule path="/data[at0001]/events[at0002]/data[at0003]/items[at0024]" max="0" />
@@ -76,13 +77,17 @@
       <Rule path="/data[at0001]/events[at0002]/state[at0022]" hide_on_form="true" />
       <Rule path="/data[at0001]/events[at0002]/state[at0022]/items[at0056]" max="0" />
     </Content>
-    <Content xsi:type="OBSERVATION" archetype_id="openEHR-EHR-OBSERVATION.breathing_assessment_reset.v0" concept_name="Breathing assessment RESET" path="/content" hide_on_form="true">
+    <Content xsi:type="OBSERVATION" archetype_id="openEHR-EHR-OBSERVATION.breathing_assessment_reset.v0" concept_name="Breathing assessment RESET" path="/content">
       <Rule path="/data[at0001]" hide_on_form="true" />
       <Rule path="/data[at0001]/events[at0002]" hide_on_form="true">
         <eventConstraint>
           <allowedType>PointInTime</allowedType>
         </eventConstraint>
       </Rule>
+      <Rule path="/data[at0001]/events[at0002]/data[at0003]" hide_on_form="true" />
+      <Rule path="/data[at0001]/events[at0002]/state[at0020]" hide_on_form="true" />
+      <Rule path="/data[at0001]/events[at0002]/state[at0020]/items[at0021]" max="0" />
+      <Rule path="/protocol[at0018]" hide_on_form="true" />
     </Content>
     <Content xsi:type="OBSERVATION" archetype_id="openEHR-EHR-OBSERVATION.story.v1" concept_name="Story/History" path="/content" hide_on_form="true">
       <Rule path="/data[at0001]" hide_on_form="true" />
@@ -93,9 +98,9 @@
       </Rule>
       <Rule path="/data[at0001]/events[at0002]/data[at0003]" hide_on_form="true" />
       <Rule path="/data[at0001]/events[at0002]/data[at0003]/items[at0004]" max="0" />
-      <Items xsi:type="CLUSTER" archetype_id="openEHR-EHR-CLUSTER.breathing_evaluation_reset.v0" concept_name="Breathing palpation RESET" path="/data[at0001]/events[at0002]/data[at0003]/items[at0006]" hide_on_form="true" />
+      <Items xsi:type="CLUSTER" archetype_id="openEHR-EHR-CLUSTER.breathing_evaluation_reset.v0" concept_name="Breathing palpation RESET" path="/data[at0001]/events[at0002]/data[at0003]/items[at0006]" />
     </Content>
-    <Content xsi:type="OBSERVATION" archetype_id="openEHR-EHR-OBSERVATION.indirect_oximetry.v1" concept_name="Indirect Oximetry" path="/content" hide_on_form="true">
+    <Content xsi:type="OBSERVATION" archetype_id="openEHR-EHR-OBSERVATION.indirect_oximetry.v1" concept_name="Indirect Oximetry" path="/content">
       <Rule path="/data[at0001]" hide_on_form="true" />
       <Rule path="/data[at0001]/events[at0002]" hide_on_form="true">
         <eventConstraint>
@@ -119,14 +124,14 @@
       <Rule path="/protocol[at0007]/items[at0020]" max="0" />
       <Rule path="/protocol[at0007]/items[at0037]" max="0" />
       <Rule path="/protocol[at0007]/items[at0038]" max="0" />
-      <Items xsi:type="CLUSTER" archetype_id="openEHR-EHR-CLUSTER.ambient_oxygen.v1" concept_name="Ambient oxygen" max="1" path="/data[at0001]/events[at0002]/state[at0014]/items[at0015]" hide_on_form="true">
+      <Items xsi:type="CLUSTER" archetype_id="openEHR-EHR-CLUSTER.ambient_oxygen.v1" concept_name="Ambient oxygen" path="/data[at0001]/events[at0002]/state[at0014]/items[at0015]">
         <Rule path="/items[at0051]" max="0" />
         <Rule path="/items[at0053]" max="0" />
         <Rule path="/items[at0057]" max="0" />
         <Rule path="/items[at0054]" max="0" />
       </Items>
     </Content>
-    <Content xsi:type="OBSERVATION" archetype_id="openEHR-EHR-OBSERVATION.conclusion_assess_b_reset.v0" concept_name="Conclusion Assessment B RESET" path="/content" hide_on_form="true">
+    <Content xsi:type="OBSERVATION" archetype_id="openEHR-EHR-OBSERVATION.conclusion_assess_b_reset.v0" concept_name="Conclusion Assessment B RESET" path="/content">
       <Rule path="/data[at0001]" hide_on_form="true" />
       <Rule path="/data[at0001]/events[at0002]" hide_on_form="true">
         <eventConstraint>
@@ -134,6 +139,9 @@
         </eventConstraint>
       </Rule>
       <Rule path="/data[at0001]/events[at0002]/data[at0003]" hide_on_form="true" />
+      <Rule path="/data[at0001]/events[at0002]/state[at0008]" hide_on_form="true" />
+      <Rule path="/data[at0001]/events[at0002]/state[at0008]/items[at0009]" max="0" />
+      <Rule path="/protocol[at0010]" hide_on_form="true" />
     </Content>
     <Context>
       <Rule path="/context/other_context[at0001]" hide_on_form="true" />
@@ -147,7 +155,7 @@
     <digest id="MD5-CAM-1.0.1">F785361CE72E20207CD557387B49B703</digest>
   </integrity_checks>
   <integrity_checks xsi:type="ArchetypeIntegrity" archetype_id="openEHR-EHR-OBSERVATION.breathing_assessment_reset.v0">
-    <digest id="MD5-CAM-1.0.1">143232808FF1E711D8E0443C2B34E2F9</digest>
+    <digest id="MD5-CAM-1.0.1">5D0F4E886D81D0A05D8808160211E988</digest>
   </integrity_checks>
   <integrity_checks xsi:type="ArchetypeIntegrity" archetype_id="openEHR-EHR-OBSERVATION.story.v1">
     <digest id="MD5-CAM-1.0.1">FE1660C9372AFA772F77A1EA8F028E03</digest>
@@ -162,6 +170,6 @@
     <digest id="MD5-CAM-1.0.1">BF3DE3D0860724F8F671DD7860468AB4</digest>
   </integrity_checks>
   <integrity_checks xsi:type="ArchetypeIntegrity" archetype_id="openEHR-EHR-OBSERVATION.conclusion_assess_b_reset.v0">
-    <digest id="MD5-CAM-1.0.1">5B870FB217BED91ADBAA0B3DB3A1FB31</digest>
+    <digest id="MD5-CAM-1.0.1">CFC0600EB677E2CF8A179CE81635439F</digest>
   </integrity_checks>
 </template>

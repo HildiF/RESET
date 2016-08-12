@@ -25,7 +25,7 @@ description
 	other_contributors = <>
 	other_details = <
 		["current_contact"] = <"Hildegard Franke, freshEHR Clinical Informatics Ltd.<hildi@freshehr.com>">
-		["MD5-CAM-1.0.1"] = <"019469440ED755229336D142FECF404E">
+		["MD5-CAM-1.0.1"] = <"D2FC668588CA0C48B17ECECE1730564B">
 	>
 
 definition
@@ -53,6 +53,11 @@ definition
 							at0008]	-- Stretor
 						}
 					}
+				}
+			}
+			ELEMENT[at0009] occurrences matches {0..1} matches {	-- Additional information
+				value matches {
+					DV_TEXT matches {*}
 				}
 			}
 		}
@@ -97,6 +102,10 @@ ontology
 				["at0008"] = <
 					text = <"Stretor">
 					description = <"The patient's breathing includes stretor.">
+				>
+				["at0009"] = <
+					text = <"Additional information">
+					description = <"Narrative description of any additional relevant information such as abnormal effort.">
 				>
 			>
 		>

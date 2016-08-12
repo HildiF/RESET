@@ -25,7 +25,7 @@ description
 	other_contributors = <>
 	other_details = <
 		["current_contact"] = <"Hildegard Franke, freshEHR Clinical Informatics Ltd.<hildi@freshehr.com>">
-		["MD5-CAM-1.0.1"] = <"E6DE379C65584317AEEAC005CF6E44FB">
+		["MD5-CAM-1.0.1"] = <"277209C4AE9972F14B1BB6ABBC030469">
 	>
 
 definition
@@ -41,17 +41,27 @@ definition
 					DV_TEXT matches {*}
 				}
 			}
-			ELEMENT[at0003] occurrences matches {0..1} matches {	-- Functional examination
+			ELEMENT[at0003] occurrences matches {0..1} matches {	-- Exercise tolerance
 				value matches {
 					DV_TEXT matches {*}
 				}
 			}
-			ELEMENT[at0004] occurrences matches {0..1} matches {	-- Care preferences / ceilings
+			ELEMENT[at0004] occurrences matches {0..1} matches {	-- Care packages / disability
 				value matches {
 					DV_TEXT matches {*}
 				}
 			}
-			ELEMENT[at0005] occurrences matches {0..1} matches {	-- Renal, sepsis and other labs
+			ELEMENT[at0005] occurrences matches {0..1} matches {	-- Frailty assessment
+				value matches {
+					DV_TEXT matches {*}
+				}
+			}
+			ELEMENT[at0006] occurrences matches {0..1} matches {	-- Escalation status
+				value matches {
+					DV_TEXT matches {*}
+				}
+			}
+			ELEMENT[at0007] occurrences matches {0..1} matches {	-- Additional comments/relevant exam
 				value matches {
 					DV_TEXT matches {*}
 				}
@@ -76,16 +86,24 @@ ontology
 					description = <"Narrative description of drains, lines and tubes in the patient's body.">
 				>
 				["at0003"] = <
-					text = <"Functional examination">
-					description = <"Narrative description of functional examination.">
+					text = <"Exercise tolerance">
+					description = <"Narrative description of exercise tolerance.">
 				>
 				["at0004"] = <
-					text = <"Care preferences / ceilings">
-					description = <"Narrative description of care preferences and ceilings.">
+					text = <"Care packages / disability">
+					description = <"Narrative description of care packages and disability.">
 				>
 				["at0005"] = <
-					text = <"Renal, sepsis and other labs">
-					description = <"Narrative description of tests for renal problems and sepsis and any other relevant lab tests.">
+					text = <"Frailty assessment">
+					description = <"Narrative description of frailty assessment.">
+				>
+				["at0006"] = <
+					text = <"Escalation status">
+					description = <"Narrative description of escalation status.">
+				>
+				["at0007"] = <
+					text = <"Additional comments/relevant exam">
+					description = <"Narrative description of any additional comments and relevant exams in the context of Assessment E.">
 				>
 			>
 		>
