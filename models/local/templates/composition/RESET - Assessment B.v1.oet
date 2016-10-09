@@ -5,7 +5,7 @@
   <description>
     <lifecycle_state>Initial</lifecycle_state>
     <details>
-      <purpose />
+      <purpose>For use in RESET Assessment Part B.</purpose>
       <use />
       <misuse />
     </details>
@@ -79,11 +79,7 @@
     </Content>
     <Content xsi:type="OBSERVATION" archetype_id="openEHR-EHR-OBSERVATION.breathing_assessment_reset.v0" concept_name="Breathing assessment RESET" path="/content">
       <Rule path="/data[at0001]" hide_on_form="true" />
-      <Rule path="/data[at0001]/events[at0002]" hide_on_form="true">
-        <eventConstraint>
-          <allowedType>PointInTime</allowedType>
-        </eventConstraint>
-      </Rule>
+      <Rule path="/data[at0001]/events[at0002]" hide_on_form="true" />
       <Rule path="/data[at0001]/events[at0002]/data[at0003]" hide_on_form="true" />
       <Rule path="/data[at0001]/events[at0002]/state[at0020]" hide_on_form="true" />
       <Rule path="/data[at0001]/events[at0002]/state[at0020]/items[at0021]" max="0" />
@@ -133,11 +129,7 @@
     </Content>
     <Content xsi:type="OBSERVATION" archetype_id="openEHR-EHR-OBSERVATION.conclusion_assess_b_reset.v0" concept_name="Conclusion Assessment B RESET" path="/content">
       <Rule path="/data[at0001]" hide_on_form="true" />
-      <Rule path="/data[at0001]/events[at0002]" hide_on_form="true">
-        <eventConstraint>
-          <allowedType>PointInTime</allowedType>
-        </eventConstraint>
-      </Rule>
+      <Rule path="/data[at0001]/events[at0002]" hide_on_form="true" />
       <Rule path="/data[at0001]/events[at0002]/data[at0003]" hide_on_form="true" />
       <Rule path="/data[at0001]/events[at0002]/state[at0008]" hide_on_form="true" />
       <Rule path="/data[at0001]/events[at0002]/state[at0008]/items[at0009]" max="0" />
@@ -155,7 +147,7 @@
     <digest id="MD5-CAM-1.0.1">F785361CE72E20207CD557387B49B703</digest>
   </integrity_checks>
   <integrity_checks xsi:type="ArchetypeIntegrity" archetype_id="openEHR-EHR-OBSERVATION.breathing_assessment_reset.v0">
-    <digest id="MD5-CAM-1.0.1">5D0F4E886D81D0A05D8808160211E988</digest>
+    <digest id="MD5-CAM-1.0.1">20330343817254E6C5849A6E537E19D9</digest>
   </integrity_checks>
   <integrity_checks xsi:type="ArchetypeIntegrity" archetype_id="openEHR-EHR-OBSERVATION.story.v1">
     <digest id="MD5-CAM-1.0.1">FE1660C9372AFA772F77A1EA8F028E03</digest>
@@ -170,6 +162,6 @@
     <digest id="MD5-CAM-1.0.1">BF3DE3D0860724F8F671DD7860468AB4</digest>
   </integrity_checks>
   <integrity_checks xsi:type="ArchetypeIntegrity" archetype_id="openEHR-EHR-OBSERVATION.conclusion_assess_b_reset.v0">
-    <digest id="MD5-CAM-1.0.1">CFC0600EB677E2CF8A179CE81635439F</digest>
+    <digest id="MD5-CAM-1.0.1">BDAF83D2E6767DF1FD33BE3FDE7C4994</digest>
   </integrity_checks>
 </template>

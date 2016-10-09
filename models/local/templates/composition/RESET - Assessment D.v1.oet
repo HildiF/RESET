@@ -169,24 +169,27 @@
         </Rule>
         <Rule path="/data[at0001]/events[at0002]/data[at0003]" hide_on_form="true" />
         <Rule path="/data[at0001]/events[at0002]/data[at0003]/items[at0004]" max="0" />
-        <Items xsi:type="CLUSTER" archetype_id="openEHR-EHR-CLUSTER.symptom.v1" concept_name="Symptom" path="/data[at0001]/events[at0002]/data[at0003]/items[at0006]">
-          <Rule path="/items[at0001]" name="Meningism">
-            <constraint xsi:type="textConstraint">
-              <includedValues>Meningism</includedValues>
-            </constraint>
-          </Rule>
+        <Items xsi:type="CLUSTER" archetype_id="openEHR-EHR-CLUSTER.symptom_sign.v1" concept_name="Symptom/Sign" path="/data[at0001]/events[at0002]/data[at0003]/items[at0006]">
+          <Rule path="/items[at0001]" name="Meningism" />
+          <Rule path="/items[at0002]" max="0" />
           <Rule path="/items[at0151]" max="0" />
+          <Rule path="/items[at0175]" max="0" />
+          <Rule path="/items[at0186]" max="0" />
           <Rule path="/items[at0152]" max="0" />
+          <Rule path="/items[at0164]" max="0" />
           <Rule path="/items[at0028]" max="0" />
           <Rule path="/items[at0021]" max="0" />
-          <Rule path="/items[at0155]" max="0" />
+          <Rule path="/items[at0026]" max="0" />
+          <Rule path="/items[at0180]" max="0" />
           <Rule path="/items[at0003]" max="0" />
+          <Rule path="/items[at0018]" max="0" />
+          <Rule path="/items[at0165]" max="0" />
+          <Rule path="/items[at0155]" max="0" />
           <Rule path="/items[at0037]" max="0" />
           <Rule path="/items[at0161]" max="0" />
-          <Rule path="/items[at0031]" max="0" />
           <Rule path="/items[at0057]" max="0" />
-          <Rule path="/items[at0090]" max="0" />
-          <Rule path="/items[at0018]" max="0" />
+          <Rule path="/items[at0031]" max="0" />
+          <Rule path="/items[at0163]" max="0" />
         </Items>
       </Item>
     </Content>
@@ -200,24 +203,27 @@
         </Rule>
         <Rule path="/data[at0001]/events[at0002]/data[at0003]" hide_on_form="true" />
         <Rule path="/data[at0001]/events[at0002]/data[at0003]/items[at0004]" max="0" />
-        <Items xsi:type="CLUSTER" archetype_id="openEHR-EHR-CLUSTER.symptom.v1" concept_name="Symptom" path="/data[at0001]/events[at0002]/data[at0003]/items[at0006]">
-          <Rule path="/items[at0001]" name="FAST">
-            <constraint xsi:type="textConstraint">
-              <includedValues>FAST</includedValues>
-            </constraint>
-          </Rule>
+        <Items xsi:type="CLUSTER" archetype_id="openEHR-EHR-CLUSTER.symptom_sign.v1" concept_name="Symptom/Sign" path="/data[at0001]/events[at0002]/data[at0003]/items[at0006]">
+          <Rule path="/items[at0001]" name="FAST" />
+          <Rule path="/items[at0002]" max="0" />
           <Rule path="/items[at0151]" max="0" />
+          <Rule path="/items[at0175]" max="0" />
+          <Rule path="/items[at0186]" max="0" />
           <Rule path="/items[at0152]" max="0" />
+          <Rule path="/items[at0164]" max="0" />
           <Rule path="/items[at0028]" max="0" />
           <Rule path="/items[at0021]" max="0" />
-          <Rule path="/items[at0155]" max="0" />
+          <Rule path="/items[at0026]" max="0" />
+          <Rule path="/items[at0180]" max="0" />
           <Rule path="/items[at0003]" max="0" />
+          <Rule path="/items[at0018]" max="0" />
+          <Rule path="/items[at0165]" max="0" />
+          <Rule path="/items[at0155]" max="0" />
           <Rule path="/items[at0037]" max="0" />
           <Rule path="/items[at0161]" max="0" />
-          <Rule path="/items[at0031]" max="0" />
           <Rule path="/items[at0057]" max="0" />
-          <Rule path="/items[at0090]" max="0" />
-          <Rule path="/items[at0018]" max="0" />
+          <Rule path="/items[at0031]" max="0" />
+          <Rule path="/items[at0163]" max="0" />
         </Items>
       </Item>
       <Item xsi:type="OBSERVATION" archetype_id="openEHR-EHR-OBSERVATION.story.v1" concept_name="Story/History" path="/items" hide_on_form="true">
@@ -229,20 +235,27 @@
         </Rule>
         <Rule path="/data[at0001]/events[at0002]/data[at0003]" hide_on_form="true" />
         <Rule path="/data[at0001]/events[at0002]/data[at0003]/items[at0004]" max="0" />
-        <Items xsi:type="CLUSTER" archetype_id="openEHR-EHR-CLUSTER.symptom.v1" concept_name="Symptom" path="/data[at0001]/events[at0002]/data[at0003]/items[at0006]">
-          <Rule path="/items[at0001]" name="Other factors" />
+        <Items xsi:type="CLUSTER" archetype_id="openEHR-EHR-CLUSTER.symptom_sign.v1" concept_name="Symptom/Sign" path="/data[at0001]/events[at0002]/data[at0003]/items[at0006]">
+          <Rule path="/items[at0001]" name="Other symptom" />
+          <Rule path="/items[at0002]" max="0" />
           <Rule path="/items[at0151]" max="0" />
+          <Rule path="/items[at0175]" max="0" />
+          <Rule path="/items[at0186]" max="0" />
           <Rule path="/items[at0152]" max="0" />
+          <Rule path="/items[at0164]" max="0" />
           <Rule path="/items[at0028]" max="0" />
           <Rule path="/items[at0021]" max="0" />
-          <Rule path="/items[at0155]" max="0" />
+          <Rule path="/items[at0026]" max="0" />
+          <Rule path="/items[at0180]" max="0" />
           <Rule path="/items[at0003]" max="0" />
+          <Rule path="/items[at0018]" max="0" />
+          <Rule path="/items[at0165]" max="0" />
+          <Rule path="/items[at0155]" max="0" />
           <Rule path="/items[at0037]" max="0" />
           <Rule path="/items[at0161]" max="0" />
-          <Rule path="/items[at0031]" max="0" />
           <Rule path="/items[at0057]" max="0" />
-          <Rule path="/items[at0090]" max="0" />
-          <Rule path="/items[at0018]" max="0" />
+          <Rule path="/items[at0031]" max="0" />
+          <Rule path="/items[at0163]" max="0" />
         </Items>
       </Item>
     </Content>
@@ -287,10 +300,10 @@
   <integrity_checks xsi:type="ArchetypeIntegrity" archetype_id="openEHR-EHR-OBSERVATION.story.v1">
     <digest id="MD5-CAM-1.0.1">FE1660C9372AFA772F77A1EA8F028E03</digest>
   </integrity_checks>
-  <integrity_checks xsi:type="ArchetypeIntegrity" archetype_id="openEHR-EHR-CLUSTER.symptom.v1">
-    <digest id="MD5-CAM-1.0.1">6185C39D123A47621BA4E89703EB4900</digest>
+  <integrity_checks xsi:type="ArchetypeIntegrity" archetype_id="openEHR-EHR-CLUSTER.symptom_sign.v1">
+    <digest id="MD5-CAM-1.0.1">D99FDDA78E05025ED49B9F7502795394</digest>
   </integrity_checks>
   <integrity_checks xsi:type="ArchetypeIntegrity" archetype_id="openEHR-EHR-OBSERVATION.conclusion_assess_d_reset.v0">
-    <digest id="MD5-CAM-1.0.1">0157167E353107956571E6FF25FA467E</digest>
+    <digest id="MD5-CAM-1.0.1">6A6C8BAE1F26AC9DF97EF468269BC5C3</digest>
   </integrity_checks>
 </template>

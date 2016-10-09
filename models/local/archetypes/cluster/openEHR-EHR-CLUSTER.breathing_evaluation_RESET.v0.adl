@@ -17,11 +17,11 @@ description
 			language = <[ISO_639-1::en]>
 			purpose = <"For recording palpation, percussion and auscultation findings as part of a breathing evaluation in an unscheduled clinical assessment in emergency care.">
 			use = <"Use for recording of breathing-related palpation, percussion and auscultation findings specific to an emergency care breathing evaluation.">
-			misuse = <"Not to be used for detailed breathing-related palpation, percussion and auscultaiton findings in contexts other than in emergency care.">
+			misuse = <"Not to be used for detailed breathing-related palpation, percussion and auscultation findings in contexts other than in emergency care.">
 			copyright = <"">
 		>
 	>
-	lifecycle_state = <"0">
+	lifecycle_state = <"NotSet">
 	other_contributors = <>
 	other_details = <
 		["current_contact"] = <"Hildegard Franke, freshEHR Clinical Informatics Ltd.<hildi@freshehr.com>">

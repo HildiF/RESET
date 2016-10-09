@@ -1,4 +1,4 @@
-archetype (adl_version=1.4)
+﻿archetype (adl_version=1.4; uid=7e08757e-261b-4323-a8b1-0cbe3aa01d9f)
 	openEHR-EHR-OBSERVATION.conclusion_assess_a_reset.v0
 
 concept
@@ -19,14 +19,21 @@ description
 			use = <"Use for RESET project for airway assessment conclusion.">
 			keywords = <"RESET", "Rapid response", "emergency", "assessment">
 			misuse = <"Not to be used outside the scope of RESET.">
-			copyright = <"">
+			copyright = <"© Clinical Models UK">
 		>
 	>
-	lifecycle_state = <"Initial">
+	lifecycle_state = <"NotSet">
 	other_contributors = <>
 	other_details = <
+		["revision"] = <"0.0.1-alpha">
+		["original_publisher"] = <"UK Clinical Models">
 		["current_contact"] = <"Hildegard Franke, freshEHR Clinical Informatics Ltd.<hildi@freshehr.com>">
-		["MD5-CAM-1.0.1"] = <"0344DBCD373DD764662E59AA7D5BA0A9">
+		["build_uid"] = <"0bb1afe8-14b2-4609-9981-d067318372f2">
+		["original_namespace"] = <"uk.org.clinicalmodels">
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 3.0 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/3.0/.">
+		["MD5-CAM-1.0.1"] = <"B47C11525897D0D765B85532DECCCCE5">
+		["custodian_namespace"] = <"uk.org.clinicalmodels">
+		["custodian_organisation"] = <"UK Clinical Models">
 	>
 
 definition
@@ -34,7 +41,7 @@ definition
 		data matches {
 			HISTORY[at0001] matches {	-- Event Series
 				events cardinality matches {1..*; unordered} matches {
-					EVENT[at0002] occurrences matches {0..1} matches {	-- Any event
+					POINT_EVENT[at0002] occurrences matches {0..1} matches {	-- Point in time
 						data matches {
 							ITEM_TREE[at0003] matches {	-- Tree
 								items cardinality matches {0..*; unordered} matches {
@@ -87,15 +94,15 @@ ontology
 			items = <
 				["at0000"] = <
 					text = <"Conclusion Assessment A RESET">
-					description = <"RESET project Assessment A Conclusion">
+					description = <"RESET project Assessment A Conclusion.">
 				>
 				["at0001"] = <
 					text = <"Event Series">
 					description = <"@ internal @">
 				>
 				["at0002"] = <
-					text = <"Any event">
-					description = <"*">
+					text = <"Point in time">
+					description = <"A specific date and/or time which may be explicitly defined in a template or at run-time.">
 				>
 				["at0003"] = <
 					text = <"Tree">
