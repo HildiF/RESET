@@ -85,27 +85,7 @@
         <Rule path="/protocol[at0007]/items[at0020]" max="0" />
         <Rule path="/protocol[at0007]/items[at0037]" max="0" />
         <Rule path="/protocol[at0007]/items[at0038]" max="0" />
-        <Items xsi:type="CLUSTER" archetype_id="openEHR-EHR-CLUSTER.ambient_oxygen.v1" concept_name="Ambient oxygen" max="1" path="/data[at0001]/events[at0002]/state[at0014]/items[at0015]" hide_on_form="true">
-          <Rule path="/items[at0053]" max="0" />
-          <Rule path="/items[at0057]" max="0" />
-          <Rule path="/items[at0054]" max="0" />
-        </Items>
-        <Items xsi:type="CLUSTER" archetype_id="openEHR-EHR-CLUSTER.device.v1" concept_name="Medical Device" path="/protocol[at0007]/items[at0056]" hide_on_form="true">
-          <Rule path="/items[at0001]" name="Oxygen delivery device" />
-          <Rule path="/items[at0003]" max="0" />
-          <Rule path="/items[at0002]" max="0" />
-          <Rule path="/items[at0021]" max="0" />
-          <Rule path="/items[at0004]" max="0" />
-          <Rule path="/items[at0005]" max="0" />
-          <Rule path="/items[at0020]" max="0" />
-          <Rule path="/items[at0022]" max="0" />
-          <Rule path="/items[at0023]" max="0" />
-          <Rule path="/items[at0006]" max="0" />
-          <Rule path="/items[at0025]" max="0" />
-          <Rule path="/items[at0007]" max="0" />
-          <Rule path="/items[at0024]" max="0" />
-          <Rule path="/items[at0008]" max="0" />
-        </Items>
+        <Items xsi:type="CLUSTER" archetype_id="openEHR-EHR-CLUSTER.ambient_oxygen.v0" concept_name="Inspired oxygen" path="/data[at0001]/events[at0002]/state[at0014]/items[at0015]" />
       </Item>
       <Item xsi:type="OBSERVATION" archetype_id="openEHR-EHR-OBSERVATION.laboratory_test.v0" concept_name="Laboratory test" max="1" path="/items" name="pH">
         <Rule path="/data[at0001]" hide_on_form="true" />
@@ -930,22 +910,19 @@
     </Context>
   </definition>
   <integrity_checks xsi:type="ArchetypeIntegrity" archetype_id="openEHR-EHR-COMPOSITION.report.v1">
-    <digest id="MD5-CAM-1.0.1">AA03B74E02546F77F2FAA9ECE452F333</digest>
+    <digest id="MD5-CAM-1.0.1">FD053BE0456D849CACD864F274EED32E</digest>
   </integrity_checks>
   <integrity_checks xsi:type="ArchetypeIntegrity" archetype_id="openEHR-EHR-SECTION.adhoc.v1">
-    <digest id="MD5-CAM-1.0.1">1EDDC99B0C6EA2B163D98A9FEE10417B</digest>
+    <digest id="MD5-CAM-1.0.1">833221C23E2B25AD3CB9B0B78EE33740</digest>
   </integrity_checks>
   <integrity_checks xsi:type="ArchetypeIntegrity" archetype_id="openEHR-EHR-OBSERVATION.indirect_oximetry.v1">
     <digest id="MD5-CAM-1.0.1">4388FC26E8F584CF143244AF68A6147B</digest>
   </integrity_checks>
-  <integrity_checks xsi:type="ArchetypeIntegrity" archetype_id="openEHR-EHR-CLUSTER.ambient_oxygen.v1">
-    <digest id="MD5-CAM-1.0.1">BF3DE3D0860724F8F671DD7860468AB4</digest>
-  </integrity_checks>
-  <integrity_checks xsi:type="ArchetypeIntegrity" archetype_id="openEHR-EHR-CLUSTER.device.v1">
-    <digest id="MD5-CAM-1.0.1">F09649C839F331ADA3FA32CD0F42B5A5</digest>
+  <integrity_checks xsi:type="ArchetypeIntegrity" archetype_id="openEHR-EHR-CLUSTER.ambient_oxygen.v0">
+    <digest id="MD5-CAM-1.0.1">8C671A1A0AA3CF5B73C917881A7E511D</digest>
   </integrity_checks>
   <integrity_checks xsi:type="ArchetypeIntegrity" archetype_id="openEHR-EHR-OBSERVATION.laboratory_test.v0">
-    <digest id="MD5-CAM-1.0.1">43DAB5D13714EC7C2DF7678FE2C772BE</digest>
+    <digest id="MD5-CAM-1.0.1">64F4898018F4D87C7D8ADAF36558AAF7</digest>
   </integrity_checks>
   <integrity_checks xsi:type="ArchetypeIntegrity" archetype_id="openEHR-EHR-CLUSTER.laboratory_test_panel.v0">
     <digest id="MD5-CAM-1.0.1">4609D4C2AA596C22113E03DFFBB7737C</digest>
