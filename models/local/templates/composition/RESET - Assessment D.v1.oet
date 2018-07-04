@@ -111,35 +111,19 @@
         <Rule path="/data[at0001]/events[at0002]/data[at0003]/items[at0057]" max="0" />
         <Rule path="/data[at0001]/events[at0002]/data[at0003]/items[at0098]" max="0" />
         <Rule path="/data[at0001]/events[at0002]/data[at0003]/items[at0101]" max="0" />
-        <Rule path="/data[at0001]/events[at0002]/data[at0003]/items[at0010]" max="0" />
         <Rule path="/data[at0001]/events[at0002]/state[at0112]" hide_on_form="true" />
         <Rule path="/data[at0001]/events[at0002]/state[at0112]/items[at0113]" max="0" />
         <Rule path="/protocol[at0004]" hide_on_form="true" />
         <Rule path="/protocol[at0004]/items[at0068]" max="0" />
         <Rule path="/protocol[at0004]/items[at0094]" max="0" />
         <Rule path="/protocol[at0004]/items[at0111]" max="0" />
-        <Items xsi:type="CLUSTER" archetype_id="openEHR-EHR-CLUSTER.laboratory_test_panel.v0" concept_name="Laboratory test panel" path="/data[at0001]/events[at0002]/data[at0003]/items[at0097]" hide_on_form="true">
-          <Rule path="/items[at0002]" hide_on_form="true" />
-          <Rule path="/items[at0002]/items[at0001]" name="Blood sugar result">
-            <constraint xsi:type="multipleConstraint">
-              <includedTypes>Quantity</includedTypes>
-            </constraint>
-          </Rule>
-          <Rule path="/items[at0002]/items[at0003]" max="0" />
-          <Rule path="/items[at0002]/items[at0004]" max="0" />
-          <Rule path="/items[at0002]/items[at0005]" max="0" />
-          <Rule path="/items[at0002]/items[at0006]" max="0" />
-        </Items>
+        <Items xsi:type="CLUSTER" archetype_id="openEHR-EHR-CLUSTER.laboratory_test_panel.v0" concept_name="Laboratory test panel" path="/data[at0001]/events[at0002]/data[at0003]/items[at0097]" hide_on_form="true" />
       </Item>
     </Content>
     <Content xsi:type="SECTION" archetype_id="openEHR-EHR-SECTION.adhoc.v1" concept_name="Ad hoc heading" max="1" path="/content" name="Delirium Assessment">
       <Item xsi:type="OBSERVATION" archetype_id="openEHR-EHR-OBSERVATION.cam_reset.v0" concept_name="CAM assessment RESET" path="/items">
         <Rule path="/data[at0001]" hide_on_form="true" />
-        <Rule path="/data[at0001]/events[at0002]" hide_on_form="true">
-          <eventConstraint>
-            <allowedType>PointInTime</allowedType>
-          </eventConstraint>
-        </Rule>
+        <Rule path="/data[at0001]/events[at0002]" hide_on_form="true" />
         <Rule path="/data[at0001]/events[at0002]/data[at0003]" hide_on_form="true" />
       </Item>
     </Content>
@@ -254,36 +238,36 @@
     </Context>
   </definition>
   <integrity_checks xsi:type="ArchetypeIntegrity" archetype_id="openEHR-EHR-COMPOSITION.encounter.v1">
-    <digest id="MD5-CAM-1.0.1">4DF6B3DE1A7F7899B4F88A97FED974E7</digest>
+    <digest id="MD5-CAM-1.0.1">15173A4BF38FA171E47BBE704F3E0940</digest>
   </integrity_checks>
   <integrity_checks xsi:type="ArchetypeIntegrity" archetype_id="openEHR-EHR-SECTION.adhoc.v1">
-    <digest id="MD5-CAM-1.0.1">833221C23E2B25AD3CB9B0B78EE33740</digest>
+    <digest id="MD5-CAM-1.0.1">3237F5891EC3C7D52CA1D2043D1DF62F</digest>
   </integrity_checks>
   <integrity_checks xsi:type="ArchetypeIntegrity" archetype_id="openEHR-EHR-OBSERVATION.glasgow_coma_scale.v1">
-    <digest id="MD5-CAM-1.0.1">F96DF5407AD3C630AB9F3CA94F5886AB</digest>
+    <digest id="MD5-CAM-1.0.1">83BD01BA1AEB3976DE633DCF0273E46E</digest>
   </integrity_checks>
   <integrity_checks xsi:type="ArchetypeIntegrity" archetype_id="openEHR-EHR-OBSERVATION.exam.v1">
-    <digest id="MD5-CAM-1.0.1">F68E5D84BAEAB67A14FBFFC77373CF88</digest>
+    <digest id="MD5-CAM-1.0.1">42A758CADEF3767E390EB8187F98AFF5</digest>
   </integrity_checks>
   <integrity_checks xsi:type="ArchetypeIntegrity" archetype_id="openEHR-EHR-CLUSTER.exam_pupils.v1">
     <digest id="MD5-CAM-1.0.1">F6FF509EA71274B781DACD32519934E3</digest>
   </integrity_checks>
   <integrity_checks xsi:type="ArchetypeIntegrity" archetype_id="openEHR-EHR-OBSERVATION.laboratory_test.v0">
-    <digest id="MD5-CAM-1.0.1">64F4898018F4D87C7D8ADAF36558AAF7</digest>
+    <digest id="MD5-CAM-1.0.1">28DA00B027F05A19CAC484D4036452ED</digest>
   </integrity_checks>
   <integrity_checks xsi:type="ArchetypeIntegrity" archetype_id="openEHR-EHR-CLUSTER.laboratory_test_panel.v0">
-    <digest id="MD5-CAM-1.0.1">4609D4C2AA596C22113E03DFFBB7737C</digest>
+    <digest id="MD5-CAM-1.0.1">482A9A46BAB3629A4242D4BD8D5B915B</digest>
   </integrity_checks>
   <integrity_checks xsi:type="ArchetypeIntegrity" archetype_id="openEHR-EHR-OBSERVATION.cam_reset.v0">
-    <digest id="MD5-CAM-1.0.1">7D848ACE6AF0C60B7F6149CC77A39553</digest>
+    <digest id="MD5-CAM-1.0.1">5EA7CE7307F767F031EBE3CDA8B98DF9</digest>
   </integrity_checks>
   <integrity_checks xsi:type="ArchetypeIntegrity" archetype_id="openEHR-EHR-OBSERVATION.story.v1">
     <digest id="MD5-CAM-1.0.1">1A6AFF556A3135480517C4E830985332</digest>
   </integrity_checks>
   <integrity_checks xsi:type="ArchetypeIntegrity" archetype_id="openEHR-EHR-CLUSTER.symptom_sign.v1">
-    <digest id="MD5-CAM-1.0.1">D99FDDA78E05025ED49B9F7502795394</digest>
+    <digest id="MD5-CAM-1.0.1">722FB3886409D9A08A7FD119D76254B0</digest>
   </integrity_checks>
   <integrity_checks xsi:type="ArchetypeIntegrity" archetype_id="openEHR-EHR-OBSERVATION.conclusion_assess_d_reset.v0">
-    <digest id="MD5-CAM-1.0.1">6A6C8BAE1F26AC9DF97EF468269BC5C3</digest>
+    <digest id="MD5-CAM-1.0.1">B06439F03DB56FB1BC3C72ED3816E4CB</digest>
   </integrity_checks>
 </template>

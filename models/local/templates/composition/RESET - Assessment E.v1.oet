@@ -83,15 +83,15 @@
     </Context>
   </definition>
   <integrity_checks xsi:type="ArchetypeIntegrity" archetype_id="openEHR-EHR-COMPOSITION.encounter.v1">
-    <digest id="MD5-CAM-1.0.1">A3E06C6FC4299B12A2D3798D87F8E032</digest>
+    <digest id="MD5-CAM-1.0.1">15173A4BF38FA171E47BBE704F3E0940</digest>
   </integrity_checks>
   <integrity_checks xsi:type="ArchetypeIntegrity" archetype_id="openEHR-EHR-OBSERVATION.story.v1">
-    <digest id="MD5-CAM-1.0.1">FE1660C9372AFA772F77A1EA8F028E03</digest>
+    <digest id="MD5-CAM-1.0.1">1A6AFF556A3135480517C4E830985332</digest>
   </integrity_checks>
   <integrity_checks xsi:type="ArchetypeIntegrity" archetype_id="openEHR-EHR-CLUSTER.extra_examination_reset.v0">
-    <digest id="MD5-CAM-1.0.1">378B49BAE496E22B9954448A20F8399E</digest>
+    <digest id="MD5-CAM-1.0.1">B2B7C70938332A351EC4894AE1579F23</digest>
   </integrity_checks>
   <integrity_checks xsi:type="ArchetypeIntegrity" archetype_id="openEHR-EHR-OBSERVATION.conclusion_assess_e_reset.v0">
-    <digest id="MD5-CAM-1.0.1">9781BAF8BCA4925B95AC1B5776E0FBFC</digest>
+    <digest id="MD5-CAM-1.0.1">D5CFCDD8A583069EBE80F8D3EF75D2F9</digest>
   </integrity_checks>
 </template>

@@ -1,4 +1,4 @@
-archetype (adl_version=1.4)
+﻿archetype (adl_version=1.4; uid=066470e5-c293-4b1c-8523-1d5c760f50fb)
 	openEHR-EHR-OBSERVATION.breathing_assessment_reset.v0
 
 concept
@@ -8,8 +8,8 @@ language
 description
 	original_author = <
 		["name"] = <"Hildegard Franke">
-		["email"] = <"hildi@freshehr.com">
 		["organisation"] = <"freshEHR Clinical Informatics Ltd.">
+		["email"] = <"hildi@freshehr.com">
 		["date"] = <"2016-03-04">
 	>
 	details = <
@@ -19,14 +19,21 @@ description
 			use = <"Local archetype for use in RESET project.">
 			keywords = <"RESET", "breathing", "assessment">
 			misuse = <"">
-			copyright = <"">
+			copyright = <"© Clinical Models UK">
 		>
 	>
-	lifecycle_state = <"NotSet">
+	lifecycle_state = <"in_development">
 	other_contributors = <"Teresa Ross", "Brendan O'Brien", "Alexander Davey", "Andrew Patton">
 	other_details = <
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 3.0 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/3.0/.">
+		["custodian_organisation"] = <"UK Clinical Models">
 		["current_contact"] = <"Hildegard Franke, freshEHR Clinical Informatics Ltd.<hildi@freshehr.com>">
-		["MD5-CAM-1.0.1"] = <"20330343817254E6C5849A6E537E19D9">
+		["original_namespace"] = <"uk.org.clinicalmodels">
+		["original_publisher"] = <"UK Clinical Models">
+		["custodian_namespace"] = <"uk.org.clinicalmodels">
+		["MD5-CAM-1.0.1"] = <"BA6EA477FCD1F1227555E535A527187F">
+		["build_uid"] = <"886956fe-92b7-465c-b66b-df5fe110468f">
+		["revision"] = <"0.0.1-alpha">
 	>
 
 definition
@@ -105,6 +112,7 @@ definition
 			}
 		}
 	}
+
 
 ontology
 	term_definitions = <

@@ -1,4 +1,4 @@
-archetype (adl_version=1.4)
+﻿archetype (adl_version=1.4; uid=c34dc110-2533-4d16-8661-09d47f984c2e)
 	openEHR-EHR-CLUSTER.breathing_evaluation_reset.v0
 
 concept
@@ -8,8 +8,8 @@ language
 description
 	original_author = <
 		["name"] = <"Hildegard Franke">
-		["email"] = <"hildi@freshehr.com">
 		["organisation"] = <"freshEHR Clinical Informatics Ltd.">
+		["email"] = <"hildi@freshehr.com">
 		["date"] = <"2016-03-29">
 	>
 	details = <
@@ -18,14 +18,21 @@ description
 			purpose = <"For recording palpation, percussion and auscultation findings as part of a breathing evaluation in an unscheduled clinical assessment in emergency care.">
 			use = <"Use for recording of breathing-related palpation, percussion and auscultation findings specific to an emergency care breathing evaluation.">
 			misuse = <"Not to be used for detailed breathing-related palpation, percussion and auscultation findings in contexts other than in emergency care.">
-			copyright = <"">
+			copyright = <"© Clinical Models UK">
 		>
 	>
-	lifecycle_state = <"NotSet">
+	lifecycle_state = <"in_development">
 	other_contributors = <>
 	other_details = <
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 3.0 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/3.0/.">
+		["custodian_organisation"] = <"UK Clinical Models">
 		["current_contact"] = <"Hildegard Franke, freshEHR Clinical Informatics Ltd.<hildi@freshehr.com>">
-		["MD5-CAM-1.0.1"] = <"FF0A5130B114C1A609474116173612C8">
+		["original_namespace"] = <"uk.org.clinicalmodels">
+		["original_publisher"] = <"UK Clinical Models">
+		["custodian_namespace"] = <"uk.org.clinicalmodels">
+		["MD5-CAM-1.0.1"] = <"F06A8BAF88BB3725130682997860749D">
+		["build_uid"] = <"efd412ff-1fad-4666-a89b-1c186fb00687">
+		["revision"] = <"0.0.1-alpha">
 	>
 
 definition
@@ -131,6 +138,7 @@ definition
 			}
 		}
 	}
+
 
 ontology
 	term_definitions = <

@@ -1,4 +1,4 @@
-archetype (adl_version=1.4)
+﻿archetype (adl_version=1.4; uid=fd5ee114-fc10-47f3-8666-5a00c3f6ff50)
 	openEHR-EHR-OBSERVATION.conclusion_assess_b_reset.v0
 
 concept
@@ -8,8 +8,8 @@ language
 description
 	original_author = <
 		["name"] = <"Hildegard Franke">
-		["email"] = <"hildi@freshehr.com">
 		["organisation"] = <"freshEHR Clinical Informatics Ltd.">
+		["email"] = <"hildi@freshehr.com">
 		["date"] = <"2016-05-03">
 	>
 	details = <
@@ -19,14 +19,21 @@ description
 			use = <"Use for RESET project for breathing assessment conclusion.">
 			keywords = <"Assessment", "RESET", "Emergency", "Rapid response", "Breathing">
 			misuse = <"Not to be used outside the scope of RESET project.">
-			copyright = <"">
+			copyright = <"© Clinical Models UK">
 		>
 	>
-	lifecycle_state = <"Initial">
+	lifecycle_state = <"in_development">
 	other_contributors = <>
 	other_details = <
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 3.0 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/3.0/.">
+		["custodian_organisation"] = <"UK Clinical Models">
 		["current_contact"] = <"Hildegard Franke, freshEHR Clinical Informatics Ltd.<hildi@freshehr.com>">
-		["MD5-CAM-1.0.1"] = <"BDAF83D2E6767DF1FD33BE3FDE7C4994">
+		["original_namespace"] = <"uk.org.clinicalmodels">
+		["original_publisher"] = <"UK Clinical Models">
+		["custodian_namespace"] = <"uk.org.clinicalmodels">
+		["MD5-CAM-1.0.1"] = <"2CD50938907CC2C09DEE4F959486A222">
+		["build_uid"] = <"9193d7d7-fd47-4f90-ab4e-64ff682cda59">
+		["revision"] = <"0.0.1-alpha">
 	>
 
 definition
@@ -79,6 +86,7 @@ definition
 			}
 		}
 	}
+
 
 ontology
 	term_definitions = <
