@@ -60,7 +60,7 @@
             </item>
             <item>
                 <key>MD5-CAM-1.0.1</key>
-                <value>acb4c5339ec1bf98420567b807c8845d</value>
+                <value>4262ab1aeff2a96d4e0810756cafcd36</value>
             </item>
             <item>
                 <key>PARENT:MD5-CAM-1.0.1</key>
@@ -81,7 +81,9 @@
         </Content>
         <Content
             archetype_id="openEHR-EHR-OBSERVATION.conclusion_assess_e_reset.v0"
-            path="/content" xsi:type="tem:OBSERVATION"/>
+            path="/content" xsi:type="tem:OBSERVATION">
+            <Rule max="0" path="/data[at0001]/events[at0002]/state[at0010]/items[at0011]"/>
+        </Content>
     </definition>
     <integrity_checks
         archetype_id="openEHR-EHR-COMPOSITION.encounter.v1"
