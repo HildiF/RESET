@@ -1,0 +1,16 @@
+{
+    "ctx/language": "en",
+    "ctx/territory": "GB",
+    "ctx/composer_name": "Dr A Davey",
+    "ctx/id_namespace": "HOSPITAL-NS",
+    "ctx/id_scheme": "HOSPITAL-NS",
+    "ctx/health_care_facility|name": "A B Hospital",
+    "ctx/health_care_facility|id": "9091",
+    "ctx/time": "2019-07-21",
+    "reset_assessment_b_breathing/respirations:0/any_event:0/respiratory_rate|magnitude": 25,
+    "reset_assessment_b_breathing/respirations:0/any_event:0/respiratory_rate|unit": "/min",
+    "reset_assessment_b_breathing/respirations:0/any_event:0/inspired_oxygen/flow_rate|magnitude": 6,
+    "reset_assessment_b_breathing/respirations:0/any_event:0/inspired_oxygen/flow_rate|unit": "l/min",
+    "reset_assessment_b_breathing/respirations:0/any_event:0/inspired_oxygen/fio|numerator": 0.36,
+    "reset_assessment_b_breathing/respirations:0/any_event:0/inspired_oxygen/fio|denominator": 1
+}

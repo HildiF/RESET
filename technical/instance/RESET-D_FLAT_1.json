@@ -1,0 +1,19 @@
+{
+    "ctx/language": "en",
+    "ctx/territory": "GB",
+    "ctx/composer_name": "Dr A Davey",
+    "ctx/id_namespace": "HOSPITAL-NS",
+    "ctx/id_scheme": "HOSPITAL-NS",
+    "ctx/health_care_facility|name": "A B Hospital",
+    "ctx/health_care_facility|id": "9091",
+    "ctx/time": "2019-07-21",
+    "reset_assessment_d/pupils/physical_examination_findings:0/any_event:0/interpretation:0": "PERLA3",
+    "reset_assessment_d/pupils/physical_examination_findings:0/any_event:0/comment": "Comment 34",
+    "reset_assessment_d/pupils/physical_examination_findings:0/any_event:0/position": "Position 16",
+    "reset_assessment_d/blood_sugar/laboratory_test:0/any_event:0/blood_sugar": "Blood Glucose",
+    "reset_assessment_d/meningism/story_history:0/symptom_sign:0/meningism": "Meningism",
+    "reset_assessment_d/meningism/story_history:0/symptom_sign:0/nil_significant": true,
+    "reset_assessment_d/fast_other/story_history_1/symptom_sign:0/fast": "FAST",
+    "reset_assessment_d/fast_other/story_history_1/symptom_sign:0/nil_significant": true,
+    "reset_assessment_d/fast_other/story_history:0/symptom_sign:0/other_symptom": "Nausea"
+}

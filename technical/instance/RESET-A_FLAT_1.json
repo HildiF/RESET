@@ -1,0 +1,13 @@
+{
+    "ctx/language": "en",
+    "ctx/territory": "GB",
+    "ctx/composer_name": "Dr A Davey",
+    "ctx/id_namespace": "HOSPITAL-NS",
+    "ctx/id_scheme": "HOSPITAL-NS",
+    "ctx/health_care_facility|name": "A B Hospital",
+    "ctx/health_care_facility|id": "9091",
+    "ctx/time": "2019-07-21",
+    "reset_assessment_a_airway/avpu:0/any_event:0/observation|code": "at0008",
+    "reset_assessment_a_airway/avpu:0/any_event:0/confounding_factors": "Inebriated",
+    "reset_assessment_a_airway/avpu:0/pain_stimulus": "Chest pressure"
+}
