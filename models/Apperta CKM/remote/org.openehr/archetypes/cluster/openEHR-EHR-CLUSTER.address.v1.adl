@@ -1,8 +1,9 @@
-﻿archetype (adl_version=1.4)
+archetype (adl_version=1.4; uid=7dcba69e-cc15-3726-b836-557bdb36075e)
 	openEHR-EHR-CLUSTER.address.v1
 
 concept
-	[at0000]	-- Address
+	[at0000]
+
 language
 	original_language = <[ISO_639-1::en]>
 	translations = <
@@ -14,6 +15,13 @@ language
 				["email"] = <"demski@helmholtz-muenchen.de">
 			>
 		>
+		["es-ar"] = <
+			language = <[ISO_639-1::es-ar]>
+			author = <
+				["name"] = <"Alan March">
+				["organisation"] = <"Hospital Universitario Austral, Pilar, Buenos Aires, Argentina">
+			>
+		>
 		["el"] = <
 			language = <[ISO_639-1::el]>
 			author = <
@@ -23,13 +31,6 @@ language
 			>
 			accreditation = <"Royal College of Online Gaming">
 		>
-		["es-ar"] = <
-			language = <[ISO_639-1::es-ar]>
-			author = <
-				["name"] = <"Alan March">
-				["organisation"] = <"Hospital Universitario Austral, Pilar, Buenos Aires, Argentina">
-			>
-		>
 		["ar-sy"] = <
 			language = <[ISO_639-1::ar-sy]>
 			author = <
@@ -37,111 +38,102 @@ language
 			>
 		>
 	>
+
 description
 	original_author = <
+		["date"] = <"2007-11-11">
 		["name"] = <"Ian McNicoll">
 		["organisation"] = <"Ocean Informatics">
-		["date"] = <"2007-11-11">
 	>
+	lifecycle_state = <"Initial">
 	details = <
 		["de"] = <
 			language = <[ISO_639-1::de]>
 			purpose = <"Zur Dokumentation einer oder mehrerer Adressen einer Person oder Einrichtung.">
-			use = <"">
 			keywords = <"Adresse", ...>
-			misuse = <"">
 			copyright = <"© openEHR Foundation">
 		>
 		["es-ar"] = <
 			language = <[ISO_639-1::es-ar]>
 			purpose = <"Registrar los detalles de uno o mas domicilios personales de un individuo.">
-			use = <"">
-			keywords = <"domicilio", "dirección">
-			misuse = <"">
-			copyright = <"© openEHR Foundation">
-		>
-		["ar-sy"] = <
-			language = <[ISO_639-1::ar-sy]>
-			purpose = <"لتسجيل تفاصيل عنوان شخصي أو أكثر الخاص بشخص ما">
-			use = <"">
-			keywords = <"العنوان", ...>
-			misuse = <"">
-			copyright = <"© openEHR Foundation">
-		>
-		["en"] = <
-			language = <[ISO_639-1::en]>
-			purpose = <"To record details of one or more personal addresses for an individual.">
-			use = <"">
-			keywords = <"address", ...>
-			misuse = <"">
+			keywords = <"domicilio","dirección">
 			copyright = <"© openEHR Foundation">
 		>
 		["el"] = <
 			language = <[ISO_639-1::el]>
 			purpose = <"Γιά την καταγραφή λεπτομερειών μίας ή περισσoτέρων προσωπικών διευθύνσεων για ένα άτομο.">
-			use = <"">
 			keywords = <"διεύθυνση", ...>
-			misuse = <"">
+			copyright = <"© openEHR Foundation">
+		>
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"To record details of one or more personal addresses for an individual.">
+			keywords = <"address", ...>
+			copyright = <"© openEHR Foundation">
+		>
+		["ar-sy"] = <
+			language = <[ISO_639-1::ar-sy]>
+			purpose = <"لتسجيل تفاصيل عنوان شخصي أو أكثر الخاص بشخص ما">
+			keywords = <"العنوان", ...>
 			copyright = <"© openEHR Foundation">
 		>
 	>
-	lifecycle_state = <"Initial">
-	other_contributors = <>
 	other_details = <
 		["references"] = <"From NHS Scotland SCI-XML messaging standards http://www.isdscotland.org/isd/files/general-v2-7.xsd NHS Scotland Interoperability Working Group http://www.isdscotland.org/isd/5194.htm originally based on: Postal address of person.  ENV 13606 - 4:2000 7.11.13">
-		["MD5-CAM-1.0.1"] = <"18D2B0E9FACF5C8F0094A5EDDFC97B09">
+		["MD5-CAM-1.0.1"] = <"e0fa38033ddb6d3de1e0ac8736ef8e1a">
+		["build_uid"] = <"5dbf5369-fd3e-307b-b993-ecc674984627">
 	>
 
 definition
-	CLUSTER[at0000] matches {	-- Address
+	CLUSTER[at0000] matches {    -- Address
 		items cardinality matches {1..*; unordered} matches {
-			CLUSTER[at0001] occurrences matches {0..*} matches {	-- Address
+			CLUSTER[at0001] occurrences matches {0..*} matches {    -- Address
 				items cardinality matches {1..*; unordered} matches {
-					ELEMENT[at0006] matches {	-- Address Type
+					ELEMENT[at0006] matches {    -- Address Type
 						value matches {
 							DV_CODED_TEXT matches {
 								defining_code matches {
 									[local::
-									at0011, 	-- Residential
-									at0012, 	-- Correspondence
-									at0013, 	-- Business
-									at0014]	-- Temporary
+									at0011,    -- Residential
+									at0012,    -- Correspondence
+									at0013,    -- Business
+									at0014]    -- Temporary
 								}
 							}
 						}
 					}
-					ELEMENT[at0002] occurrences matches {0..1} matches {	-- Unstructured address
+					ELEMENT[at0002] occurrences matches {0..1} matches {    -- Unstructured address
 						value matches {
 							DV_TEXT matches {*}
 						}
 					}
-					CLUSTER[at0003] occurrences matches {0..1} matches {	-- Structured address
+					CLUSTER[at0003] occurrences matches {0..1} matches {    -- Structured address
 						items cardinality matches {1..*; unordered} matches {
-							ELEMENT[at0005] occurrences matches {0..1} matches {	-- Property number
+							ELEMENT[at0005] occurrences matches {0..1} matches {    -- Property number
 								value matches {
 									DV_TEXT matches {*}
 								}
 							}
-							ELEMENT[at0009] occurrences matches {0..4} matches {	-- Address line
+							ELEMENT[at0009] occurrences matches {0..*} matches {    -- Address line
 								value matches {
 									DV_TEXT matches {*}
 								}
 							}
 						}
 					}
-					ELEMENT[at0004] occurrences matches {0..1} matches {	-- Post code
+					ELEMENT[at0004] occurrences matches {0..1} matches {    -- Post code
 						value matches {
 							DV_TEXT matches {*}
 						}
 					}
-					CLUSTER[at0015] occurrences matches {0..1} matches {	-- AddressValid Period
+					CLUSTER[at0015] occurrences matches {0..1} matches {    -- AddressValid Period
 						items cardinality matches {1..*; unordered} matches {
-							ELEMENT[at0007] occurrences matches {0..1} matches {	-- Valid from
+							ELEMENT[at0007] occurrences matches {0..1} matches {    -- Valid from
 								value matches {
 									DV_DATE_TIME matches {*}
 								}
 							}
-							ELEMENT[at0008] occurrences matches {0..1} matches {	-- Valid to
+							ELEMENT[at0008] occurrences matches {0..1} matches {    -- Valid to
 								value matches {
 									DV_DATE_TIME matches {*}
 								}
@@ -152,8 +144,6 @@ definition
 			}
 		}
 	}
-
-
 
 ontology
 	term_definitions = <
