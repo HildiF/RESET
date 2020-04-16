@@ -80,7 +80,7 @@ description
 	>
 	other_details = <
 		["references"] = <"From NHS Scotland SCI-XML messaging standards http://www.isdscotland.org/isd/files/general-v2-7.xsd NHS Scotland Interoperability Working Group http://www.isdscotland.org/isd/5194.htm originally based on: Postal address of person.  ENV 13606 - 4:2000 7.11.13">
-		["MD5-CAM-1.0.1"] = <"e0fa38033ddb6d3de1e0ac8736ef8e1a">
+		["MD5-CAM-1.0.1"] = <"5bbf8d4ec7e3e88c910992311fa5aa34">
 		["build_uid"] = <"5dbf5369-fd3e-307b-b993-ecc674984627">
 	>
 
@@ -114,7 +114,7 @@ definition
 									DV_TEXT matches {*}
 								}
 							}
-							ELEMENT[at0009] occurrences matches {0..*} matches {    -- Address line
+							ELEMENT[at0009] occurrences matches {0..4} matches {    -- Address line
 								value matches {
 									DV_TEXT matches {*}
 								}
